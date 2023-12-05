@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends("master")
+
+@section("title", " Edit Data Pegawai")
+
+@section("konten")
 
 	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>Edit Pegawai</h3>
@@ -14,16 +13,36 @@
 	<br/>
 
 	@foreach($pegawai as $p)
-	<form action="/pegawai/update" method="post">
+	<form action="/pegawai/update" method="post" class="form-horizontal">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
-		Nama <input type="text" required="required" name="nama" value="{{ $p->pegawai_nama }}"> <br/>
-		Jabatan <input type="text" required="required" name="jabatan" value="{{ $p->pegawai_jabatan }}"> <br/>
-		Umur <input type="number" required="required" name="umur" value="{{ $p->pegawai_umur }}"> <br/>
-		Alamat <textarea required="required" name="alamat">{{ $p->pegawai_alamat }}</textarea> <br/>
+        <div class="form-group row">
+            <label for="nama" class="col-xs-3 col-form-label mr-2 control-label">Nama</label>
+            <div class="col-xs-9">
+            <input type="text" class="form-control" id="nama" name="nama" value="{{ $p->pegawai_nama }}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="jabatan" class="col-xs-3 col-form-label mr-2 control-label">Jabatan</label>
+            <div class="col-xs-9">
+            <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $p->pegawai_jabatan }}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="umur" class="col-xs-3 col-form-label mr-2 control-label">Umur</label>
+            <div class="col-xs-9">
+            <input type="text" class="form-control" id="umur" name="umur" value="{{ $p->pegawai_umur }}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="alamat" class="col-xs-3 col-form-label mr-2 control-label">Alamat</label>
+            <div class="col-xs-9">
+            <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $p->pegawai_alamat }}">
+            </div>
+        </div>
+
 		<input type="submit" value="Simpan Data">
 	</form>
 	@endforeach
 
-</body>
-</html>
+    @endsection
