@@ -79,3 +79,8 @@ Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@sto
 Route::get('/tasindex','App\Http\Controllers\TasController@index');
 Route::get('/tasindex/tambahdatatas','App\Http\Controllers\TasController@tambah');
 Route::post('/tasindex/store','App\Http\Controllers\TasController@store');
+
+Route::get('/keranjangindex','App\Http\Controllers\KeranjangController@index');
+Route::get('/keranjangindex/tambahkeranjang','App\Http\Controllers\KeranjangController@tambah');
+Route::post('/keranjangindex/store','App\Http\Controllers\KeranjangController@store');
+Route::get('/keranjangindex/hapus/{ID}','App\Http\Controllers\KeranjangController@hapus');
