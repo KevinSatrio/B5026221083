@@ -1,4 +1,4 @@
-@extends("master")
+@extends("Master/master")
 
 @section("title", "Keranjang")
 

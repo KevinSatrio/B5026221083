@@ -43,7 +43,7 @@
   @yield("konten")
 </div>
 
-@include("footer")
+@include("Master/footer")
 
 </body>
 </html>

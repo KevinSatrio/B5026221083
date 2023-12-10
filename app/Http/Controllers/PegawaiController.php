@@ -17,7 +17,7 @@ class PegawaiController extends Controller
                     ->paginate(10);
 
     	// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('Pegawai/index',['pegawai' => $pegawai]);
 
 	}
 
@@ -26,7 +26,7 @@ class PegawaiController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('tambah');
+		return view('Pegawai/tambah');
 
 	}
 
@@ -51,7 +51,7 @@ class PegawaiController extends Controller
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('edit',['pegawai' => $pegawai]);
+		return view('Pegawai/edit',['pegawai' => $pegawai]);
 
 	}
 
@@ -91,7 +91,7 @@ class PegawaiController extends Controller
 		->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai, 'cari' => $cari]);
+		return view('Pegawai/index',['pegawai' => $pegawai, 'cari' => $cari]);
 
 	}
 
@@ -101,7 +101,7 @@ class PegawaiController extends Controller
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('view',['pegawai' => $pegawai]);
+		return view('Pegawai/view',['pegawai' => $pegawai]);
 
 	}
 }
