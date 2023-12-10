@@ -46,7 +46,6 @@ class TasController extends Controller
 	public function store(Request $request)
 	{
 
-
 		// insert data ke table tas
 		DB::table('tas')->insert([
 			'merktas' => $request->merktas,
@@ -67,6 +66,19 @@ class TasController extends Controller
 		// passing data tas yang didapat ke view tasedit.blade.php
 		return view('Tas/tasedit',['tas' => $tas]);
 
+	}
+
+    // update data pegawai
+	public function update(Request $request)
+	{
+		// update data pegawai
+		DB::table('tas')->where('kodetas',$request->id)->update([
+			'merktas' => $request->merktas,
+			'stocktas' => $request->stocktas,
+			'tersedia' => $request->tersedia
+		]);
+		// alihkan halaman ke halaman pegawai
+		return redirect('/tasindex');
 	}
 
      // method untuk menghapus data pada table tas

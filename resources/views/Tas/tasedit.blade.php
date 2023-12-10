@@ -5,6 +5,7 @@
 @section("konten")
 
     @foreach($tas as $p)
+
     <div class="container mt-5">
         <div class="card">
             <div class="card-header">
@@ -13,16 +14,17 @@
             <div class="card-body">
                 <form action="/tasindex/update" method="post">
                     {{ csrf_field() }}
+                    <input type="hidden" name="id" value="{{ $p->kodetas }}"> <br/>
                     <div class="form-group row">
-                        <label for="nama" class="col-sm-4 col-form-label">Merk:</label>
+                        <label for="merktas" class="col-sm-4 col-form-label">Merk:</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="nama" name="nama" value="{{ $p->merktas }}">
+                            <input type="text" class="form-control" id="merktas" name="merktas" value="{{ $p->merktas }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="jabatan" class="col-sm-4 col-form-label">Stock:</label>
+                        <label for="stocktas" class="col-sm-4 col-form-label">Stock:</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $p->stocktas }}">
+                            <input type="text" class="form-control" id="stocktas" name="stocktas" value="{{ $p->stocktas }}">
                         </div>
                     </div>
 

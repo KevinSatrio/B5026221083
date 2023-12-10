@@ -13,6 +13,7 @@
             <div class="card-body">
                 <form action="/pegawai/update" method="post">
                     {{ csrf_field() }}
+                    <input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
                     <div class="form-group row">
                         <label for="nama" class="col-sm-3 col-form-label">Nama:</label>
                         <div class="col-sm-9">

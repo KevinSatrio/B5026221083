@@ -76,6 +76,7 @@ Route::get('/tasindex','App\Http\Controllers\TasController@index');
 Route::get('/tasindex/tambahdatatas','App\Http\Controllers\TasController@tambah');
 Route::post('/tasindex/store','App\Http\Controllers\TasController@store');
 Route::get('/tasindex/edit/{kodetas}','App\Http\Controllers\TasController@edit');
+Route::post('/tasindex/update','App\Http\Controllers\TasController@update');
 Route::get('/tasindex/hapus/{kodetas}','App\Http\Controllers\TasController@hapus');
 Route::get('/tasindex/view/{kodetas}','App\Http\Controllers\TasController@view');
 Route::get('/tasindex/cari','App\Http\Controllers\TasController@cari');
