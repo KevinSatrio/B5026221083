@@ -2,10 +2,6 @@
 
 @section("title", "Data Nilai")
 
-@section("link1", "nilaikuliah/tambahdata")
-@section("link1n", "Tambah Data")
-@section("link2n", "No Access")
-@section("link3n", "No Access")
 
 @section("konten")
 

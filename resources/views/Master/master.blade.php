@@ -21,12 +21,14 @@
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Dropdown link
+        Tugas
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href=@yield("link1")>@yield("link1n")</a>
-        <a class="dropdown-item" href=@yield("link2")>@yield("link2n")</a>
-        <a class="dropdown-item disabled" href=@yield("link3")>@yield("link2n")</a>
+        <a class="dropdown-item" href=/pegawai>Pegawai</a>
+        <a class="dropdown-item" href=/keranjangindex>Keranjang Belanja</a>
+        <a class="dropdown-item" href=/nilaikuliah>Nilai Kuliah</a>
+        <a class="dropdown-item" href=/tasindex>Tas Pra EAS</a>
+        <a class="dropdown-item" href=/chatindex>Chat</a>
       </div>
     </li>
   </ul>
