@@ -13,6 +13,7 @@ class ChatController extends Controller
     	// mengambil data dari table nilaikuliah
         $chat = DB::table('chat')->get();
 
+
     	// mengirim data nilai ke view index
 		return view('EAS/index',['chat' => $chat]);
 
@@ -23,23 +24,11 @@ class ChatController extends Controller
 	{
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$chat = DB::table('chat')->where('id',$id)->get();
-        $emoticons = [':3' => '2.png',
-        ':))' => '1.png',
-        ':P' => '3.png',
-        ':C' => '4.png',
-        ';)' => '5.png',];
-
-        foreach($chat as $k){
-            $k->pieces = explode(" ", $k->pesan);
-            foreach($k->pieces as &$word)
-            if (isset($emoticons[$word])) {
-                $word = '<img src="emoticons/' . $emoticons[$word] . '">';
-            }
-            $k->pesan = implode(' ', $k->pieces);
-        }
+        $pesan = $chat[0]->pesan;
+        $kata = explode(" ", $pesan);
 
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('EAS/view',['chat' => $chat]);
+		return view('EAS/view',['kata' => $kata]);
 
 	}
 }

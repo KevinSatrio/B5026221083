@@ -4,36 +4,55 @@
 
 @section('konten')
 
-    @foreach ($chat as $p)
-        <input type="hidden" name="id" value="{{ $p->id }}"> <br />
-        <div class="container mt-4">
-            <div class="card-header">
-                <h1 class="text-center card-title">Konversi Emoticon</h1>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-12">
+<div class="card-header">
+    <h2 class="card-title">Chat</h2>
+</div>
 
-                    <div class="card">
+<div>
 
-                        <div class="card-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">    {!! $p->pesan !!}</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <div class="text-center">
-                                <a href="/chatindex" class="btn btn-primary">OK</a> <!-- Centered button -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
+    @foreach ($kata as $k)
+
+    @switch($k)
+
+    @case(':))')
+    <img src="/1.png" style="width: 20px; height: 20px;">
+    @break
+
+    @case(':C')
+    <img src="/4.png" style="width: 20px; height: 20px;">
+    @break
+
+    @case(':3')
+    <img src="/2.png" style="width: 20px; height: 20px;">
+    @break
+
+    @case(':P')
+    <img src="/3.png" style="width: 20px; height: 20px;">
+    @break
+
+    @case(';)')
+    <img src="/5.png" style="width: 20px; height: 20px;">
+    @break
+
+    @default
+    {{ $k }}
+
+    @endswitch
+
+    @if (!$loop->last)
+    {{ " " }}
+    @endif
+
     @endforeach
+    <br><br><br>
+
+    <a href="/chatindex" class="btn btn-primary">OK</a>
+
+</div>
+<br>
+<br>
+<br>
+<br>
 
 
 @endsection
