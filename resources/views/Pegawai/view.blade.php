@@ -42,11 +42,4 @@
     @endforeach
 
 
-
-
-
-
-
-
-
 @endsection

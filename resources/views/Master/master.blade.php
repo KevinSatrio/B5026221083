@@ -13,16 +13,10 @@
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">Logo</a>
+  <a class="navbar-brand" href="#">B5026221083</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
-    </li>
 
     <!-- Dropdown -->
     <li class="nav-item dropdown">
@@ -30,9 +24,9 @@
         Dropdown link
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
+        <a class="dropdown-item" href=@yield("link1")>@yield("link1n")</a>
+        <a class="dropdown-item" href=@yield("link2")>@yield("link2n")</a>
+        <a class="dropdown-item disabled" href=@yield("link3")>@yield("link2n")</a>
       </div>
     </li>
   </ul>

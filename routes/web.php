@@ -87,3 +87,8 @@ Route::get('/keranjangindex','App\Http\Controllers\KeranjangController@index');
 Route::get('/keranjangindex/tambahkeranjang','App\Http\Controllers\KeranjangController@tambah');
 Route::post('/keranjangindex/store','App\Http\Controllers\KeranjangController@store');
 Route::get('/keranjangindex/hapus/{ID}','App\Http\Controllers\KeranjangController@hapus');
+
+
+//CRUD EAS
+Route::get('/chatindex','App\Http\Controllers\ChatController@index');
+Route::get('/chatindex/view/{id}','App\Http\Controllers\ChatController@view');
